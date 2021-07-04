@@ -764,7 +764,7 @@
     },
     "permissions": [],
     "clientPermissions": [],
-    "category": "settings",
+    "category": "setting",
     "utilisation": "prefix <new prefix>",
     "parameters": [
       "NewPrefix"
@@ -785,7 +785,7 @@
     },
     "permissions": [],
     "clientPermissions": [],
-    "category": "settings",
+    "category": "setting",
     "utilisation": "resetprefix",
     "parameters": [],
     "examples": [
@@ -902,7 +902,9 @@
   {
     "name": "uptime",
     "description": "Shows sumi's uptime",
-    "aliases": [],
+    "aliases": [
+      "up"
+    ],
     "category": "sumi",
     "cooldown": {
       "time": 5000,
