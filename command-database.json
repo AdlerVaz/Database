@@ -1,94 +1,95 @@
 [
   {
-    "name": "baka",
-    "aliases": [],
-    "clientPermissions": [
-      "EMBED_LINKS",
-      "ADD_REACTIONS"
+    "name": "command",
+    "aliases": [
+      "cmd"
     ],
-    "group": "action",
-    "description": "Sends a roleplay gif `baka` to the chat, directed towards the mentioned user, if there is any. Usually interpreted as 「 The user whom this command is directed to is an idiot (in a kawaii-context) 」.",
+    "description": "Enable/Disable a command  to the users",
+    "group": "owner",
+    "cooldown": {
+      "time": 5000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "utilisation": "command <disable/enable> <commmand name>",
     "parameters": [
-      "User Mention"
+      "Disable/Enable",
+      "Command"
     ],
     "examples": [
-      "baka @user"
+      "command enable ping",
+      "command disable ping"
     ]
   },
   {
-    "name": "blush",
+    "name": "eval",
     "aliases": [],
+    "utilisation": "eval [javascript code]",
+    "cooldown": {
+      "time": 5000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
     "clientPermissions": [
-      "EMBED_LINKS",
-      "ADD_REACTIONS"
+      "EMBED_LINKS"
     ],
-    "group": "action",
-    "description": "Blushes at a user.",
+    "message": "You are going too fast. Please slow down to avoid getting rate-limited!",
+    "group": "owner",
     "parameters": [
-      "User Mention"
+      "Javascript Code"
     ],
     "examples": [
-      "blush @user"
+      "eval 1+1"
     ]
   },
   {
-    "name": "cry",
-    "aliases": [],
-    "clientPermissions": [
-      "EMBED_LINKS",
-      "ADD_REACTIONS"
+    "name": "fleave",
+    "aliases": [
+      "forceleave",
+      "leaveguild",
+      "removeguild",
+      "leaveserver"
     ],
-    "group": "action",
-    "description": "Sends a roleplay gif `cry` to the chat. Usually interpreted as 「 The user who used this commnd is crying 」. Use to indicate that you are currently crying. May be used in a similar context to the emoji 😢.",
-    "parameters": [],
-    "examples": [
-      "cry"
-    ]
-  },
-  {
-    "name": "dance",
-    "aliases": [],
+    "utilisation": "fleave <server ID> [reason]",
+    "cooldown": {
+      "time": 5000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
     "clientPermissions": [
-      "EMBED_LINKS",
-      "ADD_REACTIONS"
+      "EMBED_LINKS"
     ],
-    "group": "action",
-    "description": "Sends a roleplay gif `dance` to the chat. Usually interpreted as 「 The user who used this commnd is dancing (in joy) 」. Use to indicate that you are currently dancing (context may vary).",
-    "parameters": [],
-    "examples": [
-      "dance"
-    ]
-  },
-  {
-    "name": "disgust",
-    "aliases": [],
-    "clientPermissions": [
-      "EMBED_LINKS",
-      "ADD_REACTIONS"
-    ],
-    "group": "action",
-    "description": "Sends a roleplay gif `disgust` to the chat, directed towards the mentioned user, if there is any. Usually interpreted as 「 The user whom this command is directed to is digusting (Mazui!!, Kimoi!!) 」. Use to indicate that you are disgusted by their (ideas on their) previous chats. May be used in a similar context to the emoji 🤮.",
+    "group": "owner",
+    "description": "Force the bot to leave a server",
     "parameters": [
-      "User Mention"
+      "server ID",
+      "Reason"
     ],
     "examples": [
-      "disgust @user"
+      "fleave 728374657483920374"
     ]
   },
   {
-    "name": "feed",
-    "aliases": [],
+    "name": "getinvite",
+    "aliases": [
+      "getinv",
+      "gi"
+    ],
+    "description": "Generates an invitation to the server in question.",
+    "cooldown": {
+      "time": 5000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
     "clientPermissions": [
-      "EMBED_LINKS",
-      "ADD_REACTIONS"
+      "EMBED_LINKS"
     ],
-    "group": "action",
-    "description": "Sends a roleplay gif `feed` to the chat, directed towards the mentioned user, if there is any. Usually interpreted as 「 The user whom this command is directed to has been fed 」. Use to indicate that you are / wanted to feed the user.",
+    "utilisation": "getinvite [server name/ID]",
     "parameters": [
-      "User Mention"
+      "Feedback Message"
     ],
+    "group": "owner",
     "examples": [
-      "feed @user"
+      "feedback this command is not working bla bla.."
     ]
   }
 ]
