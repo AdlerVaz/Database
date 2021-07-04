@@ -1,92 +1,73 @@
 [
-  {
-    "name": "command",
-    "aliases": [
-      "cmd"
-    ],
-    "description": "Enable/Disable a command  to the users",
-    "group": "owner",
-    "cooldown": {
-      "time": 5000,
-      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
-    },
-    "clientPermissions": [
-      "EMBED_LINKS"
-    ],
-    "parameters": [
-      "Disable/Enable",
-      "Command"
-    ],
-    "examples": [
-      "command enable ping",
-      "command disable ping"
-    ]
-  },
-  {
-    "name": "eval",
+   {
+    "name": "tip",
     "aliases": [],
-    "utilisation": "eval [javascript code]",
-    "cooldown": {
-      "time": 5000,
-      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
-    },
-    "clientPermissions": [
-      "EMBED_LINKS"
-    ],
-    "message": "You are going too fast. Please slow down to avoid getting rate-limited!",
-    "group": "owner",
+    "guildOnly": true,
+    "group": "social",
+    "description": "Give tip to your friends!",
+    "requiresDatabase": true,
     "parameters": [
-      "Javascript Code"
+      "User Mention/ID"
     ],
     "examples": [
-      "eval 1+1"
+      "tip @user",
+      "tip 78374756574839348"
     ]
   },
   {
-    "name": "fleave",
+    "name": "transfer",
     "aliases": [
-      "forceleave",
-      "leaveguild",
-      "removeguild",
-      "leaveserver"
+      "give"
     ],
-    "cooldown": {
-      "time": 5000,
-      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
-    },
-    "clientPermissions": [
-      "EMBED_LINKS"
-    ],
-    "group": "owner",
-    "description": "Force the bot to leave a server",
+    "guildOnly": true,
+    "group": "social",
+    "description": "Transfer some of your credits to your friends!",
+    "requiresDatabase": true,
     "parameters": [
-      "server ID",
-      "Reason"
+      "User ID/Mention",
+      "Amount"
     ],
     "examples": [
-      "fleave 728374657483920374"
+      "transfer @user 5000",
+      "transfer 76859403847563546 10000"
     ]
   },
   {
-    "name": "getinvite",
-    "aliases": [
-      "getinv",
-      "gi"
-    ],
-    "description": "Generates an invitation to the server in question.",
-    "cooldown": {
-      "time": 5000,
-      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
-    },
+    "name": "unequip",
+    "aliases": [],
+    "rankcommand": true,
     "clientPermissions": [
-      "EMBED_LINKS"
+      "MANAGE_MESSAGES"
     ],
+    "group": "social",
+    "description": "Unequip a certain item.",
+    "requiresDatabase": true,
     "parameters": [
-      "Feedback Message"
+      "item type"
     ],
-    "group": "owner",
     "examples": [
-      "feedback this command is not working bla bla.."
+      "unequip wreath",
+      "unequip background"
+    ]
+  },
+  {
+    "name": "use",
+    "aliases": [
+      "equip"
+    ],
+    "rankcommand": true,
+    "clientPermissions": [
+      "MANAGE_MESSAGES"
+    ],
+    "group": "social",
+    "description": "Equips an item.",
+    "requiresDatabase": true,
+    "paramters": [
+      "item ID"
+    ],
+    "examples": [
+      "equip 67",
+      "use 15"
     ]
   }
 ]
