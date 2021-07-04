@@ -1,0 +1,949 @@
+[
+  {
+    "name": "chatbot",
+    "description": "Shows ChatBot's config",
+    "aliases": [],
+    "utilisation": "chatbot",
+    "timeout": 10000,
+    "message": "You are going too fast. Please slow down to avoid getting rate-limited!",
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "category": "chatbot"
+  },
+  {
+    "name": "disablechatbotchannel",
+    "description": "Disables a ChatBot Channel",
+    "aliases": [],
+    "utilisation": "disablechatbotchannel",
+    "message": "You are going too fast. Please slow down to avoid getting rate-limited!",
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "category": "chatbot"
+  },
+  {
+    "name": "setchatbotchannel",
+    "description": "Sets a ChatBot Channel",
+    "aliases": [],
+    "utilisation": "setchatbotchannel [mention channel/channel ID]",
+    "message": "You are going too fast. Please slow down to avoid getting rate-limited!",
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "category": "chatbot"
+  },
+  {
+    "name": "filter",
+    "aliases": [
+      "f"
+    ],
+    "description": "Sets audio filters in the Song.",
+    "category": "Music",
+    "utilisation": "{prefix}filter [filter name]"
+  },
+  {
+    "name": "w-filters",
+    "description": "Lists all the Enabled and Disabled filters,",
+    "aliases": [
+      "filters"
+    ],
+    "category": "Music",
+    "utilisation": "{prefix}filters"
+  },
+  {
+    "name": "command",
+    "aliases": [
+      "cmd"
+    ],
+    "description": "Enable/Disable a command  to the users",
+    "category": "owner",
+    "cooldown": {
+      "time": 5000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "utilisation": "command <disable/enable> <commmand name>",
+    "parameters": [
+      "Disable/Enable",
+      "Command"
+    ],
+    "examples": [
+      "command enable ping",
+      "command disable ping"
+    ]
+  },
+  {
+    "name": "debug",
+    "aliases": [],
+    "category": "owner",
+    "cooldown": {
+      "time": 5000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "utilisation": "debug",
+    "parameters": [],
+    "examples": []
+  },
+  {
+    "name": "eval",
+    "aliases": [],
+    "utilisation": "eval [javascript code]",
+    "cooldown": {
+      "time": 5000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "message": "You are going too fast. Please slow down to avoid getting rate-limited!",
+    "category": "owner",
+    "parameters": [
+      "Javascript Code"
+    ],
+    "examples": [
+      "eval 1+1"
+    ]
+  },
+  {
+    "name": "fleave",
+    "aliases": [
+      "forceleave",
+      "leaveguild",
+      "removeguild",
+      "leaveserver"
+    ],
+    "utilisation": "fleave <server ID> [reason]",
+    "cooldown": {
+      "time": 5000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "category": "owner",
+    "description": "Force the bot to leave a server",
+    "parameters": [
+      "server ID",
+      "Reason"
+    ],
+    "examples": [
+      "fleave 728374657483920374"
+    ]
+  },
+  {
+    "name": "getinvite",
+    "aliases": [
+      "getinv",
+      "gi"
+    ],
+    "description": "Generates an invitation to the server in question.",
+    "cooldown": {
+      "time": 5000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "utilisation": "getinvite [server name/ID]",
+    "parameters": [
+      "Feedback Message"
+    ],
+    "category": "owner",
+    "examples": [
+      "feedback this command is not working bla bla.."
+    ]
+  },
+  {
+    "name": "reload",
+    "description": "Reloads the command",
+    "aliases": [],
+    "utilisation": "reload [folder] [command]",
+    "cooldown": {
+      "time": 5000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "category": "owner"
+  },
+  {
+    "name": "servers",
+    "aliases": [],
+    "utilisation": "servers",
+    "cooldown": {
+      "time": 60000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "message": "You are going too fast. Please slow down to avoid getting rate-limited!",
+    "category": "owner",
+    "description": "Displays a list of Sumi's joined servers.",
+    "parameters": [],
+    "examples": []
+  },
+  {
+    "name": "terminal",
+    "aliases": [
+      "console",
+      "shell"
+    ],
+    "cooldown": {
+      "time": 60000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "category": "owner",
+    "utilisation": "terminal <command>",
+    "parameters": [
+      "command"
+    ],
+    "examples": [
+      "terminal npm update all"
+    ]
+  },
+  {
+    "name": "disconnect",
+    "aliases": [
+      "dc",
+      "leave",
+      "dis"
+    ],
+    "description": "Disconnects from the voice channel and clears the queue.",
+    "cooldown": {
+      "time": 1000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "category": "player",
+    "clientPermissions": [],
+    "utilisation": "disconnect",
+    "parameters": [],
+    "examples": []
+  },
+  {
+    "name": "forward",
+    "aliases": [
+      "fwd"
+    ],
+    "description": "Fast forwards the player by your specified amount, The default is 10 seconds.",
+    "cooldown": {
+      "time": 5000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [],
+    "category": "player",
+    "utilisation": "forward <time>",
+    "parameters": [
+      "Time"
+    ]
+  },
+  {
+    "name": "join",
+    "category": "player",
+    "aliases": [
+      "summon",
+      "connect"
+    ],
+    "description": "Summons me to the voice channel you are in.",
+    "cooldown": {
+      "time": 3000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [],
+    "utilisation": "join",
+    "parameters": [],
+    "examples": []
+  },
+  {
+    "name": "loop",
+    "aliases": [
+      "repeat",
+      "lp"
+    ],
+    "description": "Toggles looping for the current playing song.",
+    "cooldown": {
+      "time": 5000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "category": "player",
+    "utilisation": "loop",
+    "parameters": [],
+    "examples": []
+  },
+  {
+    "name": "lyrics",
+    "aliases": [
+      "ly",
+      "l"
+    ],
+    "description": "Gets the lyrics of the current playing song or searches for lyric info about a song from GeniuslLyrics.",
+    "category": "player",
+    "cooldown": {
+      "time": 5000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "utilisation": "lyrics <song name>",
+    "parameters": [
+      "Search Query"
+    ],
+    "examples": [
+      "lyrics",
+      "lyrics fukashigi no karte"
+    ]
+  },
+  {
+    "name": "moveto",
+    "aliases": [
+      "move"
+    ],
+    "description": "Moves me a new voice channel.",
+    "cooldown": {
+      "time": 3000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [],
+    "category": "moveto",
+    "utilisation": "moveto",
+    "parameters": [],
+    "examples": [
+      "moveto #General"
+    ]
+  },
+  {
+    "name": "nowplaying",
+    "aliases": [
+      "np"
+    ],
+    "description": "Show the details ofcurrently playing song.",
+    "category": "player",
+    "cooldown": {
+      "time": 2000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "utilisation": "nowplaying",
+    "parameters": [],
+    "examples": []
+  },
+  {
+    "name": "pause",
+    "description": "Pause the current song playing.",
+    "aliases": [],
+    "cooldown": {
+      "time": 3000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [],
+    "category": "player",
+    "utilisation": "pause",
+    "parameters": [],
+    "examples": []
+  },
+  {
+    "name": "play",
+    "aliases": [
+      "p"
+    ],
+    "cooldown": {
+      "time": 3000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "category": "player",
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "utilisation": "play <link/query>",
+    "parameters": [
+      "Song name or URl of the song or playlist"
+    ],
+    "examples": [
+      "play stay with me",
+      "play https://www.youtube.com/watch?v=ww7btV94ib8"
+    ]
+  },
+  {
+    "name": "replay",
+    "aliases": [
+      "rp"
+    ],
+    "description": "Changes the position(seek) of the Song.",
+    "cooldown": {
+      "time": 3000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "category": "player",
+    "utilisation": "replay",
+    "parameters": [],
+    "examples": []
+  },
+  {
+    "name": "resume",
+    "description": "Resume the Pause Player.",
+    "aliases": [
+      "re",
+      "res",
+      "continue"
+    ],
+    "cooldown": {
+      "time": 3000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [],
+    "category": "player",
+    "utilisation": "resume",
+    "parameters": [],
+    "examples": []
+  },
+  {
+    "name": "rewind",
+    "aliases": [
+      "rwd"
+    ],
+    "description": "Seeks a specific amount of Seconds backwards, The default is 10 seconds.",
+    "cooldown": {
+      "time": 5000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [],
+    "category": "player",
+    "utilisation": "forward <time>",
+    "parameters": [
+      "Time"
+    ]
+  },
+  {
+    "name": "search",
+    "aliases": [
+      "find",
+      "s"
+    ],
+    "description": "Searches from Youtube for a song via your query and returns the top 10 results.",
+    "category": "player",
+    "cooldown": {
+      "time": 5000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "utilisation": "search <query>",
+    "parameters": [
+      "Search Query"
+    ],
+    "examples": [
+      "play stay with me"
+    ]
+  },
+  {
+    "name": "seek",
+    "aliases": [],
+    "description": "Seeks to a certain point in the current track.",
+    "cooldown": {
+      "time": 5000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "category": "player",
+    "utilisation": "seek <time>",
+    "parameters": [
+      "Time"
+    ]
+  },
+  {
+    "name": "stop",
+    "aliases": [],
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "category": "player",
+    "description": "Stops the player",
+    "utilisation": "stop",
+    "parameters": [],
+    "examples": [
+      "stop"
+    ]
+  },
+  {
+    "name": "volume",
+    "aliases": [
+      "vol"
+    ],
+    "cooldown": {
+      "time": 3000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "category": "player",
+    "description": "Outputs the current volume and change Volume of the music between the range of 1 - 100",
+    "utilisation": "volume <1-100>",
+    "parameters": [
+      "volume"
+    ],
+    "examples": [
+      "volume 50"
+    ]
+  },
+  {
+    "name": "back",
+    "aliases": [
+      "b"
+    ],
+    "description": "Plays the Previous played Song and skips the current Song.",
+    "cooldown": {
+      "time": 3000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [],
+    "category": "queue",
+    "utilisation": "back",
+    "parameters": [],
+    "examples": []
+  },
+  {
+    "name": "clearqueue",
+    "aliases": [
+      "cq",
+      "clear"
+    ],
+    "description": "Clears the whole queue.",
+    "cooldown": {
+      "time": 3000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "category": "queue",
+    "utilisation": "clearqueue",
+    "parameters": [],
+    "examples": []
+  },
+  {
+    "name": "history",
+    "aliases": [
+      "pt",
+      "history"
+    ],
+    "description": "Display the queue history.",
+    "cooldown": {
+      "time": 3000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "category": "queue",
+    "utilisation": "history",
+    "parameters": [],
+    "examples": []
+  },
+  {
+    "name": "loopqueue",
+    "aliases": [
+      "qloop",
+      "lq",
+      "queueloop"
+    ],
+    "description": "Toggles looping for the whole queue.",
+    "cooldown": {
+      "time": 5000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "category": "queue",
+    "utilisation": "loopqueue",
+    "parameters": [],
+    "examples": []
+  },
+  {
+    "name": "queue",
+    "description": "Display the song queue.",
+    "aliases": [
+      "q"
+    ],
+    "cooldown": {
+      "time": 3000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "category": "queue",
+    "utilisation": "queue",
+    "parameters": [],
+    "examples": []
+  },
+  {
+    "name": "remove",
+    "aliases": [
+      "rm",
+      "delete"
+    ],
+    "description": "Remove a specific song from queue.",
+    "cooldown": {
+      "time": 5000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "category": "queue",
+    "utilisation": "remove <numbers>",
+    "parameters": [
+      "Track Number"
+    ],
+    "examples": [
+      "remove 5"
+    ]
+  },
+  {
+    "name": "shuffle",
+    "aliases": [
+      "sh"
+    ],
+    "description": "Shuffles the entire queue.",
+    "cooldown": {
+      "time": 1000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "category": "queue",
+    "utilisation": "shuffle",
+    "parameters": [],
+    "examples": []
+  },
+  {
+    "name": "skip",
+    "aliases": [
+      "n"
+    ],
+    "description": "Skips the current playing song immediately.",
+    "cooldown": {
+      "time": 5000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "category": "queue",
+    "utilisation": "skip",
+    "parameters": [
+      "Track Number"
+    ],
+    "examples": []
+  },
+  {
+    "name": "skipto",
+    "aliases": [
+      "jump",
+      "j",
+      "st"
+    ],
+    "description": "Skips to a certain position in the queue",
+    "cooldown": {
+      "time": 5000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "category": "queue",
+    "utilisation": "skipto <position>",
+    "parameters": [
+      "Track Position"
+    ],
+    "examples": [
+      "skipto 1"
+    ]
+  },
+  {
+    "name": "announcesongs",
+    "aliases": [
+      "announce"
+    ],
+    "description": "Allows the bot to announce every new song playing.",
+    "cooldown": {
+      "time": 10000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [],
+    "category": "setting",
+    "utilisation": "announcesongs <yes/no>",
+    "parameters": [
+      "Yes/No"
+    ],
+    "examples": []
+  },
+  {
+    "name": "autoplay",
+    "aliases": [
+      "ap"
+    ],
+    "description": "Toggles auto-playing songs when nothing else playing.",
+    "cooldown": {
+      "time": 10000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [],
+    "category": "setting",
+    "utilisation": "autoplay ",
+    "parameters": [],
+    "examples": []
+  },
+  {
+    "name": "prefix",
+    "aliases": [
+      "setprefix"
+    ],
+    "description": "Changes my prefix.",
+    "cooldown": {
+      "time": 10000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [],
+    "category": "settings",
+    "utilisation": "prefix <new prefix>",
+    "parameters": [
+      "NewPrefix"
+    ],
+    "examples": [
+      "prefix s!"
+    ]
+  },
+  {
+    "name": "resetprefix",
+    "aliases": [
+      "prefixreset"
+    ],
+    "description": "",
+    "cooldown": {
+      "time": 10000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [],
+    "category": "settings",
+    "utilisation": "resetprefix",
+    "parameters": [],
+    "examples": []
+  },
+  {
+    "name": "feedback",
+    "aliases": [
+      "suggest"
+    ],
+    "category": "sumi",
+    "cooldown": {
+      "time": 60000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "utilisation": "feedback <feedback message>",
+    "description": "Sends support message to my owner (Adler#7223)",
+    "parameters": [
+      "Feedback Message"
+    ],
+    "examples": [
+      "feedback this command is not working bla bla.."
+    ]
+  },
+  {
+    "name": "help",
+    "aliases": [
+      "h"
+    ],
+    "description": "",
+    "cooldown": {
+      "time": 2000,
+      "message": "Sends a list of all commands from each specific command groups and filters or a help for a command."
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "category": "sumi",
+    "utilisation": "help <command name>",
+    "parameters": [
+      "Command"
+    ],
+    "examples": []
+  },
+  {
+    "name": "botstatus",
+    "aliases": [
+      "status "
+    ],
+    "description": "Displays the status of the current bot instance.",
+    "category": "sumi",
+    "cooldown": {
+      "time": 60000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "utilisation": "status",
+    "parameters": [],
+    "examples": []
+  },
+  {
+    "name": "invite",
+    "description": "Gives you the invite link and support links",
+    "aliases": [
+      "i"
+    ],
+    "utilisation": "invite",
+    "category": "sumi",
+    "cooldown": {
+      "time": 60000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "parameters": [],
+    "examples": []
+  },
+  {
+    "name": "ping",
+    "description": "Check sumi's response time for discord",
+    "aliases": [],
+    "category": "sumi",
+    "utilisation": "ping",
+    "cooldown": {
+      "time": 1000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "parameters": [],
+    "examples": []
+  },
+  {
+    "name": "uptime",
+    "description": "Shows sumi's uptime",
+    "aliases": [],
+    "category": "sumi",
+    "cooldown": {
+      "time": 5000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "utilisation": "uptime",
+    "parameters": [],
+    "examples": []
+  },
+  {
+    "name": "blacklist",
+    "aliases": [
+      "ps"
+    ],
+    "category": "Music",
+    "utilisation": "{prefix}play [name/URL]"
+  },
+  {
+    "name": "defaultvolume",
+    "aliases": [
+      "defaultvol"
+    ],
+    "description": "Allows the bot to announce every new song playing.",
+    "cooldown": {
+      "time": 1000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [],
+    "category": "setting",
+    "utilisation": "announcesongs <yes/no>",
+    "parameters": [
+      "Volume"
+    ],
+    "examples": []
+  },
+  {},
+  {
+    "name": "playskip",
+    "aliases": [
+      "ps"
+    ],
+    "category": "Music",
+    "utilisation": "{prefix}play [name/URL]"
+  },
+  {},
+  {},
+  {}
+]
