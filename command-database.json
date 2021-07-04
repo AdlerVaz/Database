@@ -5,7 +5,7 @@
       "cmd"
     ],
     "description": "Enable/Disable a command  to the users",
-    "category": "owner",
+    "group": "owner",
     "cooldown": {
       "time": 5000,
       "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
@@ -27,7 +27,7 @@
   {
     "name": "debug",
     "aliases": [],
-    "category": "owner",
+    "group": "owner",
     "cooldown": {
       "time": 5000,
       "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
@@ -53,7 +53,7 @@
       "EMBED_LINKS"
     ],
     "message": "You are going too fast. Please slow down to avoid getting rate-limited!",
-    "category": "owner",
+    "group": "owner",
     "parameters": [
       "Javascript Code"
     ],
@@ -78,7 +78,7 @@
     "clientPermissions": [
       "EMBED_LINKS"
     ],
-    "category": "owner",
+    "group": "owner",
     "description": "Force the bot to leave a server",
     "parameters": [
       "server ID",
@@ -107,7 +107,7 @@
     "parameters": [
       "Feedback Message"
     ],
-    "category": "owner",
+    "group": "owner",
     "examples": [
       "feedback this command is not working bla bla.."
     ]
@@ -125,7 +125,7 @@
     "clientPermissions": [
       "EMBED_LINKS"
     ],
-    "category": "owner",
+    "group": "owner",
     "examples": [
       "reload player play"
     ]
@@ -143,7 +143,7 @@
       "EMBED_LINKS"
     ],
     "message": "You are going too fast. Please slow down to avoid getting rate-limited!",
-    "category": "owner",
+    "group": "owner",
     "description": "Displays a list of Sumi's joined servers.",
     "parameters": [],
     "examples": [
@@ -164,7 +164,7 @@
     "clientPermissions": [
       "EMBED_LINKS"
     ],
-    "category": "owner",
+    "group": "owner",
     "utilisation": "terminal <command>",
     "parameters": [
       "command"
