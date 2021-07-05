@@ -6,6 +6,7 @@
     ],
     "description": "Enable/Disable a command  to the users",
     "category": "owner",
+    "ownerOnly": true,
     "cooldown": {
       "time": 5000,
       "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
@@ -26,8 +27,10 @@
   },
   {
     "name": "debug",
+    "description": "check the  voice channels sumi's connected to",
     "aliases": [],
     "category": "owner",
+    "ownerOnly": true,
     "cooldown": {
       "time": 5000,
       "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
@@ -42,7 +45,9 @@
   },
   {
     "name": "eval",
+    "description": "Evaluate arbitrary Javascript",
     "aliases": [],
+    "ownerOnly": true,
     "utilisation": "eval [javascript code]",
     "cooldown": {
       "time": 5000,
@@ -79,6 +84,7 @@
       "EMBED_LINKS"
     ],
     "category": "owner",
+    "ownerOnly": true,
     "description": "Force the bot to leave a server",
     "parameters": [
       "server ID",
@@ -100,6 +106,7 @@
       "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
     },
     "permissions": [],
+    "ownerOnly": true,
     "clientPermissions": [
       "EMBED_LINKS"
     ],
@@ -126,6 +133,7 @@
       "EMBED_LINKS"
     ],
     "category": "owner",
+    "ownerOnly": true,
     "examples": [
       "reload player play"
     ]
@@ -144,6 +152,7 @@
     ],
     "message": "You are going too fast. Please slow down to avoid getting rate-limited!",
     "category": "owner",
+    "ownerOnly": true,
     "description": "Displays a list of Sumi's joined servers.",
     "parameters": [],
     "examples": [
@@ -165,6 +174,7 @@
       "EMBED_LINKS"
     ],
     "category": "owner",
+    "ownerOnly": true,
     "utilisation": "terminal <command>",
     "parameters": [
       "command"
@@ -511,6 +521,28 @@
     ]
   },
   {
+    "name": "autoplay",
+    "aliases": [
+      "ap"
+    ],
+    "description": "Toggles auto-playing songs when nothing else playing.",
+    "cooldown": {
+      "time": 10000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [
+      "ADMINISTRATOR",
+      "MANAGE_GUILD"
+    ],
+    "clientPermissions": [],
+    "category": "setting",
+    "utilisation": "autoplay ",
+    "parameters": [],
+    "examples": [
+      "autoplay"
+    ]
+  },
+  {
     "name": "back",
     "aliases": [
       "b"
@@ -721,9 +753,13 @@
       "time": 10000,
       "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
     },
-    "permissions": [],
+    "permissions": [
+      "ADMINISTRATOR",
+      "MANAGE_GUILD"
+    ],
     "clientPermissions": [],
     "category": "setting",
+    "adminOnly": true,
     "utilisation": "announcesongs <yes/no>",
     "parameters": [
       "Yes/No"
@@ -731,25 +767,6 @@
     "examples": [
       "announcesongs no",
       "announcesongs yes"
-    ]
-  },
-  {
-    "name": "autoplay",
-    "aliases": [
-      "ap"
-    ],
-    "description": "Toggles auto-playing songs when nothing else playing.",
-    "cooldown": {
-      "time": 10000,
-      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
-    },
-    "permissions": [],
-    "clientPermissions": [],
-    "category": "setting",
-    "utilisation": "autoplay ",
-    "parameters": [],
-    "examples": [
-      "autoplay"
     ]
   },
   {
@@ -762,9 +779,13 @@
       "time": 10000,
       "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
     },
-    "permissions": [],
+    "permissions": [
+      "ADMINISTRATOR",
+      "MANAGE_GUILD"
+    ],
     "clientPermissions": [],
     "category": "setting",
+    "adminOnly": true,
     "utilisation": "prefix <new prefix>",
     "parameters": [
       "NewPrefix"
@@ -783,9 +804,13 @@
       "time": 10000,
       "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
     },
-    "permissions": [],
+    "permissions": [
+      "ADMINISTRATOR",
+      "MANAGE_GUILD"
+    ],
     "clientPermissions": [],
     "category": "setting",
+    "adminOnly": true,
     "utilisation": "resetprefix",
     "parameters": [],
     "examples": [
