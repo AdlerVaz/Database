@@ -355,6 +355,7 @@
     "aliases": [
       "p"
     ],
+    "description": "Plays a song with the given name or url.",
     "cooldown": {
       "time": 3000,
       "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
@@ -585,6 +586,30 @@
     ]
   },
   {
+    "name": "filter",
+    "aliases": [
+      "f"
+    ],
+    "description": "Sets audio filters in the song.",
+    "category": "queue",
+    "utilisation": "filter <filter name>",
+    "cooldown": {
+      "time": 2000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "parameters": [
+      "Filter"
+    ],
+    "examples": [
+      "filter 8D",
+      "filter nightcore"
+    ]
+  },
+  {
     "name": "history",
     "aliases": [
       "pt",
@@ -744,6 +769,28 @@
     ]
   },
   {
+    "name": "w-filters",
+    "description": "Lists all the Enabled and Disabled filters.",
+    "aliases": [
+      "filters"
+    ],
+    "category": "queue",
+    "utilisation": "filters",
+    "cooldown": {
+      "time": 2000,
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
+    },
+    "permissions": [],
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "parameters": [],
+    "examples": [
+      "w-filters",
+      "filters"
+    ]
+  },
+  {
     "name": "announcesongs",
     "aliases": [
       "announce"
@@ -845,10 +892,10 @@
     "aliases": [
       "h"
     ],
-    "description": "",
+    "description": "Sends a list of all commands from each specific command groups and filters or a help for a command.",
     "cooldown": {
       "time": 2000,
-      "message": "Sends a list of all commands from each specific command groups and filters or a help for a command."
+      "message": "You are going too fast. Please slow down to avoid getting rate-limited!"
     },
     "permissions": [],
     "clientPermissions": [
